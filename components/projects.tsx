@@ -80,7 +80,7 @@ export default function Projects() {
     { iconName: "react", label: "React 19" },
     { iconName: "typescript", label: "TypeScript" },
     { iconName: "vitejs", label: "Vite" },
-    { iconName: "tailwindcss", label: "Tailwind CSS 4" },
+    { iconName: "tailwindcss", label: "Tailwind CSS" },
     { iconName: "zod", label: "Zod" },
     { iconName: "i18next", label: "i18next / react-i18next" },
     { iconName: "expressjs", label: "Express", variant: "dark" },
@@ -95,7 +95,7 @@ export default function Projects() {
     { iconName: "js", label: "JavaScript" },
     { iconName: "typescript", label: "TypeScript" },
     { iconName: "vitejs", label: "Vite" },
-    { iconName: "tailwindcss", label: "Tailwind CSS 4" },
+    { iconName: "tailwindcss", label: "Tailwind CSS" },
     { iconName: "php", label: "PHP" },
     { iconName: "git", label: "Git" },
   ];
