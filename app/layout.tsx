@@ -30,7 +30,9 @@ export default function RootLayout({
 
         <div className="mx-auto max-w-5xl bg-black/80 min-h-screen">
           <Nav />
-          <main className="px-18 py-12 pb-6">{children}</main>
+          <main className="sm:px-18 sm:py-12 px-4 py-8 sm:pb-6 pb-0">
+            {children}
+          </main>
         </div>
         <Toaster theme="dark" />
       </body>
