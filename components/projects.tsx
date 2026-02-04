@@ -20,10 +20,13 @@ function ProjectBlock({
   href?: string;
 }) {
   return (
-    <div className="px-18 py-12 pb-6">
-      {/* Title row */}
+    <div>
       <div className="flex items-start justify-between gap-4 mb-2">
-        <h2 className="text-xl font-semibold text-white">{title}</h2>
+        <h2 className="text-xl font-semibold text-white hover:opacity-90">
+          <a href={href ?? ""} target="_blank" rel="noreferrer">
+            {title}
+          </a>
+        </h2>
 
         {href ? (
           <Button
@@ -75,7 +78,7 @@ export default function Projects() {
 
   const movieAppStack: StackItem[] = [
     { iconName: "react", label: "React 19" },
-    { iconName: "typescript", label: "TypeScript 5.9" },
+    { iconName: "typescript", label: "TypeScript" },
     { iconName: "vitejs", label: "Vite" },
     { iconName: "tailwindcss", label: "Tailwind CSS 4" },
     { iconName: "zod", label: "Zod" },
@@ -90,7 +93,7 @@ export default function Projects() {
     { iconName: "vuejs", label: "Vue 3.5" },
     { iconName: "docker", label: "Docker" },
     { iconName: "js", label: "JavaScript" },
-    { iconName: "typescript", label: "TypeScript 5.9" },
+    { iconName: "typescript", label: "TypeScript" },
     { iconName: "vitejs", label: "Vite" },
     { iconName: "tailwindcss", label: "Tailwind CSS 4" },
     { iconName: "php", label: "PHP" },

@@ -93,17 +93,21 @@ function DesktopNav() {
                 asChild
                 className={cn(
                   navigationMenuTriggerStyle(),
-                  "bg-transparent text-muted-foreground hover:bg-accent hover:text-foreground",
-                  isActive && "bg-accent text-foreground",
+                  "bg-transparent text-muted-foreground hover:text-foreground",
+                  isActive && "text-foreground",
                 )}
               >
                 <Link
                   href={l.href}
                   target={isExternal ? "_blank" : undefined}
                   rel={isExternal ? "noreferrer" : undefined}
-                  className="inline-flex items-center gap-1"
                 >
-                  {l.label}
+                  <span className="inline-flex items-center gap-1">
+                    {l.label}
+                    {isExternal && (
+                      <ExternalLink className="size-3.5 opacity-70" />
+                    )}
+                  </span>
                 </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
@@ -123,7 +127,7 @@ function MobileNav() {
         <Button
           variant="ghost"
           size="icon"
-          className="text-foreground hover:bg-accent"
+          className="text-foreground"
           aria-label="Open menu"
         >
           <Menu className="h-5 w-5" />
@@ -153,13 +157,13 @@ function MobileNav() {
                   rel={isExternal ? "noreferrer" : undefined}
                   className={cn(
                     "flex items-center justify-between rounded-md px-4 py-2 text-sm font-medium",
-                    "text-muted-foreground hover:bg-accent hover:text-foreground focus:bg-accent focus:text-foreground focus:outline-none",
+                    "text-muted-foreground hover:text-foreground",
                     isActive && "bg-accent text-foreground",
                   )}
                 >
                   <span>{l.label}</span>
                   {isExternal ? (
-                    <ExternalLink className="h-4 w-4 opacity-70" />
+                    <ExternalLink className="size-4 opacity-70" />
                   ) : null}
                 </Link>
               </SheetClose>
