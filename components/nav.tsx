@@ -21,7 +21,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/animate-ui/components/radix/sheet";
+} from "@/components/ui/sheet";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
@@ -50,7 +50,7 @@ const links: NavLink[] = [
 
 export function Nav() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/70 backdrop-blur supports-backdrop-filter:bg-background/55">
+    <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/70">
       <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-4">
         <Link
           href="/"
@@ -170,12 +170,6 @@ function MobileNav() {
             );
           })}
         </nav>
-
-        <div className="px-6 pb-6 pt-2">
-          <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} Laurynas Miškinis
-          </p>
-        </div>
       </SheetContent>
     </Sheet>
   );
