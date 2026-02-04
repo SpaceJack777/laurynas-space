@@ -27,7 +27,7 @@ export default function CV() {
             className="text-xs variant-dark rounded-sm border border-zinc-700"
             asChild
           >
-            <a href="/Laurynas_Miskinis_CV.pdf" download>
+            <a href="/Laurynas_Miskinis_Full_Stack_Developer.pdf" download>
               Download CV
             </a>
           </Button>
@@ -83,8 +83,6 @@ export default function CV() {
                 </li>
               </ul>
             </div>
-
-            <div className="h-px bg-zinc-800" />
 
             <div className="flex items-start justify-between gap-4">
               <div>
@@ -236,8 +234,6 @@ export default function CV() {
                 </li>
               </ul>
             </div>
-
-            <div className="h-px bg-zinc-800" />
 
             <div>
               <div className="flex items-start justify-between gap-4 mb-2">

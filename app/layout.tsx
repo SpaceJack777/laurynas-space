@@ -4,6 +4,7 @@ import { Roboto } from "next/font/google";
 import "./globals.css";
 import { StarsBackground } from "@/components/animate-ui/components/backgrounds/stars";
 import { Nav } from "@/components/nav";
+import { Toaster } from "sonner";
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -31,6 +32,7 @@ export default function RootLayout({
           <Nav />
           <main className="px-18 py-12 pb-6">{children}</main>
         </div>
+        <Toaster theme="dark" />
       </body>
     </html>
   );

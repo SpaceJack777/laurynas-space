@@ -20,8 +20,8 @@ function ProjectBlock({
   href?: string;
 }) {
   return (
-    <div>
-      <div className="flex items-start justify-between gap-4 mb-2">
+    <div className="pb-14">
+      <div className="flex items-start justify-between gap-4 mb-4">
         <h2 className="text-xl font-semibold text-white hover:opacity-90">
           <a href={href ?? ""} target="_blank" rel="noreferrer">
             {title}
@@ -43,7 +43,7 @@ function ProjectBlock({
       </div>
       <p className="text-sm text-zinc-400 mb-5">{description}</p>
       <div className="mb-5">
-        <h3 className="text-sm font-medium text-white mb-3">Tech Stack</h3>
+        <h3 className="text-sm font-medium mb-4">Tech Stack</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {stack.map((item) => (
             <TechIconBadge
@@ -101,29 +101,27 @@ export default function Projects() {
   ];
 
   return (
-    <section className="max-w-5xl mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 pb-18">
-        <ProjectBlock
-          title="Space prod."
-          description="Full-stack productivity application focused on real-world architecture, type safety, and polished UI/UX."
-          stack={spaceProdStack}
-          href="https://productivity.laurynas.space/"
-        />
+    <section className="grid grid-cols-1 md:grid-cols-2 gap-x-24 pb-18">
+      <ProjectBlock
+        title="Space prod."
+        description="Full-stack productivity application focused on real-world architecture, type safety, and polished UI/UX."
+        stack={spaceProdStack}
+        href="https://productivity.laurynas.space/"
+      />
 
-        <ProjectBlock
-          title="Movie Search App"
-          description="Responsive movie tracking application with type-safe routing and a lightweight backend service."
-          stack={movieAppStack}
-          href="https://movieapp.laurynas.space/"
-        />
+      <ProjectBlock
+        title="Movie Search App"
+        description="Responsive movie tracking application with type-safe routing and a lightweight backend service."
+        stack={movieAppStack}
+        href="https://movieapp.laurynas.space/"
+      />
 
-        <ProjectBlock
-          title="Ops 24"
-          description="Full-stack insurance administration platform focused on internal tooling, data management, and operational workflows. Built with Laravel and Vue, containerized with Docker."
-          stack={ops24Stack}
-          href="https://ops24.com"
-        />
-      </div>
+      <ProjectBlock
+        title="Ops 24"
+        description="Full-stack insurance administration platform focused on internal tooling, data management, and operational workflows. Built with Laravel and Vue, containerized with Docker."
+        stack={ops24Stack}
+        href="https://ops24.com"
+      />
     </section>
   );
 }
