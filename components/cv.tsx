@@ -2,7 +2,7 @@ import { Button } from "./ui/button";
 
 export default function CV() {
   return (
-    <section>
+    <section className="pb-12">
       {/* Header */}
       <header className="mb-10">
         <div className="flex items-start justify-between gap-4">
